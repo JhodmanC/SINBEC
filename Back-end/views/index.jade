@@ -1,32 +1,49 @@
-//extends layout
+extends ./layout.jade
 
 block content
-  h1= title
-  
-  
-   if(user) 
-    ul
-      li
-        img(src="#{user.photo}")
-      li Bienvenido #{user.name}
-      li
-      //formulario para la barra de busqueda
-      form(name="add-estimation", method="post")
-        div.input
-            span.label Carrera a buscar
-            input(type="text", name="title")
-        div.actions
-            input(type="submit", value="Buscar")
-            //link para salir de la session
-        a(href='logout') Salir
-   else
+  div(class="row")  
+    if(user) 
       ul
-      li
-        //a(href='auth/twitter') Login con Twitter
-        <a href="auth/twitter"><button class="button">login con twitter</button></a>
-      li
-        //a(href='auth/facebook') Login con Facebook
-        <a href="auth/facebook"><button class="button">login con facebook</button></a>
+        li
+          img(src="#{user.photo}")
+        li Bienvenido #{user.name}
+        li
+        //formulario para la barra de busqueda
+        form(name="add-estimation", method="post")
+          div.input
+              span.label Carrera a buscar
+              input(type="text", name="title")
+          div.actions
+              //input(type="submit", value="Buscar")
+              <button class="button" id="buscar"> Buscar </button>
+              <button class="button" id="prueba"> Prueba </button>
+                
+              //link para salir de la session
+          a(href='logout') Salir
+    else
+      div(class="col-md-6 mx-auto")
+        div(class="card mt-4 text-center bg-light")
+          div(class="card-header")
+            h1(class="h4 text-white")
+              h1= title
+              img(class="rounded-circle mx-auto d-block logo m-10" src="/logo.png" alt="Logo")
+
+              <p class="text-center"> </p>
+
+          div(class="card-body")
+              
+              <p class="text-center"> </p>
+
+              //a(href='auth/twitter') Login con Twitter
+              <a href="auth/twitter" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Login con twitter</a>
+             
+              //a(href='auth/facebook') Login con Facebook
+              <a href="auth/facebook" class="btn btn-info btn-lg active" role="button" aria-pressed="true">login con facebook</a>
+
+              <a href="file:///C:/Users/jhodm/OneDrive/Escritorio/Sinbec-master/Front-end/index.html" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Volver a Inicio</a>
+      
 
 
- 
+
+
+

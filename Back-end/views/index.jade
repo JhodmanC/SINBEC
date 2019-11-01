@@ -14,17 +14,20 @@ block content
 
           div(class="card-body")     
             //formulario para la barra de busqueda
-            form(name="add-estimation", method="get")
+            <button class="button" id="buscar" href="sinbec.bucaramanga.upb.edu.co/api/datos"> Buscar </button>
+            <button class="button" id="prueba" href="sinbec.bucaramanga.upb.edu.co/api/datos"> Prueba </button>
+            
+            //form(name="add-estimation", method="get")
               div.input
                   span.label Carrera a buscar
                   input(type="text", name="tittle")
               div.actions
-                  //input(type="submit", value="Buscar")
+                  input(type="submit", value="Buscar")
                   <button class="button" id="buscar" href="sinbec.bucaramanga.upb.edu.co/api/datos"> Buscar </button>
                   <button class="button" id="prueba" href="sinbec.bucaramanga.upb.edu.co/api/datos"> Prueba </button>
                     
-                  //link para salir de la session
-              a(href='logout') Salir
+                  link para salir de la session
+            a(href='logout') Salir
     else
       div(class="col-md-6 mx-auto")
         div(class="card mt-4 text-center bg-light")

@@ -7,24 +7,24 @@ block content
         div(class="card mt-4 text-center bg-light")
           div(class="card-header")
             h1(class="h4 text-white")
-          img(src="#{user.photo}")
-          li Bienvenido #{user.name}
+              img(src="#{user.photo}")
+              li Bienvenido #{user.name}
 
-          <p class="text-center"> </p>
+              <p class="text-center"> </p>
 
-      div(class="card-body")     
-        //formulario para la barra de busqueda
-        form(name="add-estimation", method="get")
-          div.input
-              span.label Carrera a buscar
-              input(type="text", name="title")
-          div.actions
-              //input(type="submit", value="Buscar")
-              <button class="button" id="buscar"> Buscar </button>
-              <button class="button" id="prueba"> Prueba </button>
-                
-              //link para salir de la session
-          a(href='logout') Salir
+          div(class="card-body")     
+            //formulario para la barra de busqueda
+            form(name="add-estimation", method="get")
+              div.input
+                  span.label Carrera a buscar
+                  input(type="text", name="api/datos")
+              div.actions
+                  //input(type="submit", value="Buscar")
+                  <button class="button" id="buscar"> Buscar </button>
+                  <button class="button" id="prueba"> Prueba </button>
+                    
+                  //link para salir de la session
+              a(href='logout') Salir
     else
       div(class="col-md-6 mx-auto")
         div(class="card mt-4 text-center bg-light")
